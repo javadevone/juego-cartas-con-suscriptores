@@ -1,0 +1,44 @@
+#tablero{
+	background-image: url("../img/spiration_dark.png");
+	background-repeat: repeat;
+}
+
+.zona-jugadores, #mano-jugador {
+	color: white;
+	background-color: #191919;
+}
+
+#boton-mano-arriba, #boton-mano-abajo {
+	background-color: black;
+}
+
+.carta {
+	border: 1px solid white;
+	height: 100% !important;
+	color: white;
+	max-width: 160px;
+}
+
+.carta img {
+	padding: 0.5em;
+}
+
+.comun {
+	background-color: #5e5e5e;
+}
+
+.rara {
+	background-color: #005fcc;
+}
+
+.especial {
+	background-color: #17cc00;
+}
+
+.epica {
+	background-color: #6c00cc;
+}
+
+.legendaria {
+	background-color: #cc9200;
+}
