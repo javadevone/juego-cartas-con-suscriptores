@@ -1,3 +1,115 @@
+/*https://www.youtube.com/watch?v=h3l4qz76JhQ */
+
+/*CARGANDO*/
+#cargando {
+	background-image: url("../img/bright-squares.png");
+	background-repeat: repeat;
+}
+
+#carga-spinner {
+	text-align: center;
+	color: red;
+}
+
+/*BIENVENIDA*/
+#bienvenida .jumbotron {
+	width: 100%;
+	background-color: tomato;
+	color: white;
+}
+
+#boton-registro {
+	background-color: teal;
+	color: yellow;
+}
+
+#boton-registro:hover {
+	background-color: peru;
+	color: white;
+}
+
+#boton-login {
+	background-color: lawngreen;
+	color: navy;
+}
+
+#boton-login:hover {
+	background-color: salmon;
+	color: white;
+}
+
+/*LOGIN*/
+#login {
+	background-image: url("../img/textura-ruido-negro.png");
+	background-repeat: repeat;
+}
+
+#login h1 {
+	color: yellow;
+}
+
+#inputEmail {
+	background-color: magenta;
+	color: white;
+}
+
+#inputEmail::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: white;
+}
+
+#inputEmail::-moz-placeholder { /* Firefox 19+ */
+  color: white;
+}
+#inputEmail::-ms-input-placeholder { /* IE 10+ */
+  color: white;
+}
+#inputEmail::-moz-placeholder { /* Firefox 18- */
+  color: white;
+}
+
+#inputPassword {
+	background-color: sienna;
+	color: white;
+}
+
+#inputPassword::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: white;
+}
+
+#inputPassword::-moz-placeholder { /* Firefox 19+ */
+  color: white;
+}
+#inputPassword::-ms-input-placeholder { /* IE 10+ */
+  color: white;
+}
+#inputPassword::-moz-placeholder { /* Firefox 18- */
+  color: white;
+}
+
+#login-checkbox label {
+	color: tomato !important;
+}
+
+#aceptar-login {
+	background-color: lime;
+	color: black;
+	font-weight: bolder;
+}
+
+#aceptar-login:hover {
+	background-color: aqua;
+}
+
+#login-no-tienes-cuenta {
+	color: white;
+	text-decoration: none;
+}
+
+#login-no-tienes-cuenta:hover {
+	color: yellow;
+}
+
+/*TABLERO*/
 #tablero{
 	background-image: url("../img/spiration_dark.png");
 	background-repeat: repeat;

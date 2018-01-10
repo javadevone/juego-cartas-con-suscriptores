@@ -1,5 +1,92 @@
 <?php include_once "includes/incluir-declaracion-documento.php"; ?>
-	<div class="container-fluid" id="tablero">
+	<div class="container-fluid vista-juego" id="cargando">
+		<br>
+		<br>
+		<div class="row text-center">
+			<div class="col-md-4">
+			</div>
+			<div class="col-md-4" id="carga-spinner">
+			</div>
+			<div class="col-md-4">
+			</div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<div class="row text-center">
+			<div class="col-md-4">
+			</div>
+			<div class="col-md-4" id="carga-texto">
+			</div>
+			<div class="col-md-4">
+			</div>
+		</div>
+		<br>
+		<br>
+	</div>	
+	<div class="container-fluid vista-juego" id="bienvenida">
+		<div class="row">	
+			<div class="jumbotron jumbotron-fluid">
+			  <div class="container text-center">
+				<h1 class="display-4">Juego de cartas JD1</h1>
+				<p class="lead">No encontrarás un tomato más fino</p>
+				<br>
+				<br>
+				<br>
+				<div class="row">
+					<div class="col-6">
+						<button type="button" class="btn btn-lg" id="boton-registro">Regístrate</button>
+					</div>
+					<div class="col-6">
+						<button type="button" class="btn btn-lg" id="boton-login">Iniciar sesión</button>
+					</div>
+				</div>
+				<!-- TODO agregar easter egg para poner mas br al pulsar un botón oculto camuflado -->
+			  </div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid vista-juego" id="login">
+		<div class="row">
+			<div class="col-md-4">
+			</div>
+			<div class="col-md-4 text-center">
+				<br>
+				<h1>Login</h1>
+				<br>
+				<form class="form-signin">
+					<label for="inputEmail" class="sr-only">Email address</label>
+					<input type="email" id="inputEmail" class="form-control" placeholder="Pon tu tomato" required autofocus>
+					<br>
+					<label for="inputPassword" class="sr-only">Password</label>
+					<input type="password" id="inputPassword" class="form-control" placeholder="La llave de tu tomato" required>
+					<br>
+					<div class="checkbox" id="login-checkbox">
+						<label>
+							<input type="checkbox" value="remember-me" > Recuérdame, tomato
+						</label>
+					</div>
+					<br>
+					<button class="btn btn-lg btn-primary btn-block" type="submit" id="aceptar-login">Enter tomato!</button>
+					<br>
+					<br>
+					<a href="#" id="login-no-tienes-cuenta">¿No tienes una cuenta?</a>
+					<br>
+					<br>
+				</form>
+			</div>
+			<div class="col-md-4">
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid vista-juego" id="registro">
+		registro
+	</div>
+	<div class="container-fluid vista-juego" id="registro-correcto">
+	</div>
+	<div class="container-fluid vista-juego" id="menu-principal">
+	</div>
+	<div class="container-fluid vista-juego" id="tablero">
 		<div class="row zona-jugadores">
 			<div class="col-sm-6 text-left">
 				<i class="fas fa-user-circle"></i>
