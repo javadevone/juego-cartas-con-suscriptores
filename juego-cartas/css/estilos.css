@@ -12,7 +12,7 @@
 }
 
 /*BIENVENIDA*/
-#bienvenida .jumbotron {
+#bienvenida .jumbotron, #menu-principal .jumbotron {
 	width: 100%;
 	background-color: tomato;
 	color: white;
@@ -107,6 +107,66 @@
 
 #login-no-tienes-cuenta:hover {
 	color: yellow;
+}
+
+/*MENU*/
+#menu-principal {
+	background-color:black;
+	background-image:
+	radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+	radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+	radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+	radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+	background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
+	background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+
+.serie {
+	margin-bottom: 2em;
+}
+
+.contenido-interior {
+	background-color: yellow;
+	color: white !important;
+	padding-top: 1em;
+	padding: 1em;
+	text-align: center;
+	height: 26em;
+	max-width: 300px;
+	border-top: 3px solid black;
+	background-size: 100% 200%;
+    background-image: linear-gradient(to bottom, #02b2ed 50%, black 50%);
+    -webkit-transition: background-position 1s;
+    -moz-transition: background-position 1s;
+    transition: background-position 1s;
+	display: block;
+	text-decoration: none !important;
+}
+
+.contenido-interior h4 {
+	background-color: tomato;
+	padding-bottom: 0.2em;
+}
+
+#menu-jugar {
+	background-image: linear-gradient(to bottom, blueviolet 50%, salmon 50%);
+}
+
+#menu-cartas {
+	background-image: linear-gradient(to bottom, cyan 50%, salmon 50%);
+}
+
+#menu-personajes {
+	background-image: linear-gradient(to bottom, lawngreen 50%, salmon 50%);
+}
+
+#menu-tienda {
+	background-image: linear-gradient(to bottom, yellow 50%, salmon 50%);
+}
+
+.contenido-interior:hover {
+    background-position: 0 -100%;
+	cursor: pointer;
 }
 
 /*TABLERO*/

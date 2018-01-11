@@ -10,6 +10,8 @@ function numeroAleatorio(minimo, maximo) {
 	return Math.floor((Math.random() * maximo) + minimo);
 }
 
+//todo incluir esloganes aleatorios
+
 function generarCarga() {
 	var iconos = [
 		'<i class="fab fa-accessible-icon fa-spin fa-10x"></i>',
@@ -57,5 +59,11 @@ function iniciarJuego() {
 	$("#boton-login").click(function(){
 		cambiarVista("login");
 	});
-	cambiarVista("bienvenida");
+	$("#menu-cartas").click(function(){
+		cambiarVista("vista-menu-cartas");
+	});
+	$(".boton-volver-menu").click(function(){
+		cambiarVista("menu-principal");
+	});
+	cambiarVista("menu-principal");
 }
