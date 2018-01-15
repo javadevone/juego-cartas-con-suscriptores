@@ -52,6 +52,47 @@ function cambiarVista(vista) {
 	});
 }
 
+function registro() {
+	var peticion;
+	
+	$("#form-registro").submit(function(event){
+		event.preventDefault();
+		
+		if(peticion) {
+			peticion.abort();
+		}
+		
+		var $form = $(this);
+		
+		var $inputs = $form.find("input");
+		
+		var datosSerializados = $form.serialize();
+		
+		$inputs.prop("disabled", true);
+		
+		peticion = $.ajax({
+			url: "/juego-cartas/app/registro.php",
+			type: "post",
+			data: datosSerializados
+		});
+		
+		peticion.done(function(response, textStatus, jqXHR){
+			console.log(response);
+			console.log(textStatus);
+			console.log(jqXHR);
+			console.log("yes bitch");
+		});
+		
+		peticion.fail(function(jqXHR, textStatus, error){
+			console.error("Ha habido un problema: " + textStatus, error);
+		});
+		
+		peticion.always(function(){
+			$inputs.prop("disabled", false);
+		});
+	});
+}
+
 function iniciarJuego() {
 	$("#boton-registro").click(function(){
 		cambiarVista("registro");
@@ -65,5 +106,8 @@ function iniciarJuego() {
 	$(".boton-volver-menu").click(function(){
 		cambiarVista("menu-principal");
 	});
-	cambiarVista("menu-principal");
+	$("#enviar-registro").click(function(){
+		registro();
+	});
+	cambiarVista("bienvenida");
 }

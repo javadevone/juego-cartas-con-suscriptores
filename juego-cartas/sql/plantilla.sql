@@ -8,6 +8,7 @@ CREATE TABLE usuarios(
 	email VARCHAR(255) NOT NULL UNIQUE,
 	password VARCHAR(255) NOT NULL,
 	fecha_registro DATETIME NOT NULL,
+	activo TINYINT NOT NULL,
 	PRIMARY KEY(id)
 );
 
