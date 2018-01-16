@@ -12,7 +12,7 @@
 }
 
 /*BIENVENIDA*/
-#bienvenida .jumbotron, #menu-principal .jumbotron {
+#bienvenida .jumbotron, #menu-principal .jumbotron, #registro .jumbotron {
 	width: 100%;
 	background-color: tomato;
 	color: white;
@@ -46,6 +46,11 @@
 
 #login h1 {
 	color: yellow;
+}
+
+#form-login input {
+	border: none;
+	border-radius: 0;
 }
 
 #inputEmail {
@@ -94,6 +99,8 @@
 	background-color: lime;
 	color: black;
 	font-weight: bolder;
+	border-radius: 0;
+	border: none;
 }
 
 #aceptar-login:hover {
@@ -103,10 +110,74 @@
 #login-no-tienes-cuenta {
 	color: white;
 	text-decoration: none;
+	cursor: pointer;
 }
 
 #login-no-tienes-cuenta:hover {
 	color: yellow;
+}
+
+/*REGISTRO*/
+#registro .jumbotron {
+	background-color: #fabada;
+	color: rebeccapurple;
+}
+
+#area-registro-correcto {
+	padding: 2em;
+	background-color: #36626A;
+	color: white;
+}
+
+#area-registro-correcto button {
+	background-color: #73B1C1;
+	border-radius: 0;
+	border: none;
+	color: white;
+	font-weight: bolder;
+}
+
+#area-registro-correcto button:hover {
+	background-color: #F1D18A;
+	cursor: pointer;
+	color: black;
+}
+
+#area-registro {
+	padding: 2em;
+	background-color: tan;
+	color: #403321;
+}
+
+#enviar-registro {
+	background-color: lawngreen !important;
+	cursor: pointer;
+	font-weight: bolder;
+}
+
+#enviar-registro:hover {
+	background-color: red !important;
+	color: white;
+}
+
+#area-registro input {
+	background-color: #48BA95;
+	border: none;
+	border-radius: 0;
+}
+
+#area-registro input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: white;
+}
+
+#area-registro input::-moz-placeholder { /* Firefox 19+ */
+  color: white;
+}
+#area-registro input::-ms-input-placeholder { /* IE 10+ */
+  color: white;
+}
+#area-registro input::-moz-placeholder { /* Firefox 18- */
+  color: white;
 }
 
 /*MENU*/

@@ -4,6 +4,7 @@
 //https://www.youtube.com/watch?v=BLZJwzjQFpc
 //hash
 //https://www.youtube.com/watch?v=XfOxyQcbawc
+//pull request
 $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : null;
 $email = isset($_POST['email']) ? $_POST['email'] : null;
 $password = isset($_POST['password']) ? $_POST['password'] : null;
@@ -20,7 +21,7 @@ if (!isset($conexion)) {
 		$conexion -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$conexion -> exec("SET CHARACTER SET utf8");
 		
-		$sql = "INSERT INTO usuarios(nombre, email, password, fecha_registro, activo) VALUES(:nombre, :email, :password, NOW(), 0)";
+		$sql = "INSERT INTO usuarios(nombre, email, password, fecha_registro, activo) VALUES(:nombre, :email, :password, NOW(), 1)";
 		
 		$sentencia = $conexion -> prepare($sql);
                 

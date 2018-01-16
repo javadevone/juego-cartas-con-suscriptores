@@ -54,23 +54,25 @@
 				<br>
 				<h1>Login</h1>
 				<br>
-				<form class="form-signin">
+				<form class="form-signin" id="form-login">
 					<label for="inputEmail" class="sr-only">Email address</label>
-					<input type="email" id="inputEmail" class="form-control" placeholder="Pon tu tomato" required autofocus>
+					<input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Pon tu tomato" required autofocus>
 					<br>
 					<label for="inputPassword" class="sr-only">Password</label>
-					<input type="password" id="inputPassword" class="form-control" placeholder="La llave de tu tomato" required>
+					<input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="La llave de tu tomato" required>
 					<br>
+					<!--
 					<div class="checkbox" id="login-checkbox">
 						<label>
 							<input type="checkbox" value="remember-me" > Recuérdame, tomato
 						</label>
 					</div>
+					-->
 					<br>
 					<button class="btn btn-lg btn-primary btn-block" type="submit" id="aceptar-login">Enter tomato!</button>
 					<br>
 					<br>
-					<a href="#" id="login-no-tienes-cuenta">¿No tienes una cuenta?</a>
+					<p id="login-no-tienes-cuenta">¿No tienes una cuenta?</p>
 					<br>
 					<br>
 				</form>
@@ -80,25 +82,62 @@
 		</div>
 	</div>
 	<div class="container-fluid vista-juego" id="registro">
-		<form id="form-registro">
-			<div class="form-group">
-				<label for="nombre">Nombre de usuario</label>
-				<input id="nombre" name="nombre" type="text" value="nombre" placeholder="Nombre de usuario">
+		<div class="row">
+			<div class="jumbotron jumbotron-fluid">
+			  <div class="container text-center">
+				<h1 class="display-4">Juego de cartas JD1</h1>
+				<p class="lead">"Me he registrado y pasa esto..."</p>
+				<br>
+			  </div>
 			</div>
-			<div class="form-group">
-				<label for="email">Email</label>
-				<input id="email" name="email" type="email" value="a@a.com" placeholder="Email">
+		</div>
+		<div class="row">
+			<div class="col-md-4">
 			</div>
-			<div class="form-group">
-				<label for="password">Contraseña</label>
-				<input id="password" name="password" type="password" value="123456" placeholder="Contraseña">
+			<br>
+			<div class="col-md-4" id="area-registro">
+				<h2>Rellena tus datos</h2>
+				<form id="form-registro">
+					<div class="form-group">
+						<label for="nombre">Nombre de usuario</label>
+						<input class="form-control" id="nombre" name="nombre" type="text" placeholder="Nombre de usuario">
+					</div>
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input class="form-control" id="email" name="email" type="email" placeholder="Email">
+					</div>
+					<div class="form-group">
+						<label for="password">Contraseña</label>
+						<input class="form-control" id="password" name="password" type="password" placeholder="Contraseña">
+					</div>
+					<br>
+					<div class="form-group">
+						<input class="form-control" id="enviar-registro" name="enviar" type="submit" value="Registrarse">
+					</div>
+				</form>
 			</div>
-			<div class="form-group">
-				<input id="enviar-registro" name="enviar" type="submit" value="Registrarse">
+			<div class="col-md-4">
 			</div>
-		</form>
+		</div>
+		
 	</div>
-	<div class="container-fluid vista-juego" id="registro-correcto">
+	<div class="container-fluid vista-juego text-center" id="registro-correcto">
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-md-4">
+			</div>
+			<br>
+			<div class="col-md-4" id="area-registro-correcto">
+				<h2>Te has registrado con éxito</h2>
+				<br>
+				<p>Ya puedes comenzar a disfrutar del juego más popular en Twitch</p>
+				<br>
+				<button class="form-control" id="login-registro-correcto">Iniciar sesión</button>
+			</div>
+			<div class="col-md-4">
+			</div>
+		</div>
 	</div>
 	<div class="container-fluid vista-juego" id="menu-principal">
 		<div class="row">

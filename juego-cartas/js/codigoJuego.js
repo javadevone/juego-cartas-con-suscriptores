@@ -81,6 +81,56 @@ function registro() {
 			console.log(textStatus);
 			console.log(jqXHR);
 			console.log("yes bitch");
+			cambiarVista("registro-correcto");
+		});
+		
+		peticion.fail(function(jqXHR, textStatus, error){
+			console.error("Ha habido un problema: " + textStatus, error);
+		});
+		
+		peticion.always(function(){
+			$inputs.prop("disabled", false);
+		});
+	});
+}
+
+function login() {
+	var peticion;
+	
+	$("#form-login").submit(function(event){
+		event.preventDefault();
+		
+		if(peticion) {
+			peticion.abort();
+		}
+		
+		var $form = $(this);
+		
+		var $inputs = $form.find("input");
+		
+		var datosSerializados = $form.serialize();
+		
+		$inputs.prop("disabled", true);
+		
+		peticion = $.ajax({
+			url: "/juego-cartas/app/login.php",
+			type: "post",
+			data: datosSerializados
+		});
+		
+		peticion.done(function(response, textStatus, jqXHR){
+			console.log(response);
+			console.log(textStatus);
+			console.log(jqXHR);
+			//comprobar si es array o epic fail
+			if(response == "epic fail") {
+				console.log("el stream está en llamas");
+				
+			} else {
+				cambiarVista("menu-principal");
+				var usuario = JSON.parse(response);
+				console.log(usuario);
+			}
 		});
 		
 		peticion.fail(function(jqXHR, textStatus, error){
@@ -108,6 +158,16 @@ function iniciarJuego() {
 	});
 	$("#enviar-registro").click(function(){
 		registro();
+	});
+	$("#login-registro-correcto").click(function(){
+		cambiarVista("login");
+	});
+	$("#login-no-tienes-cuenta").click(function(){
+		cambiarVista("registro");
+	});
+	$("#aceptar-login").click(function(event){
+		event.stopPropagation();
+		login();
 	});
 	cambiarVista("bienvenida");
 }
